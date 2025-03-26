@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie-Tickets Hub</title>  
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Ticket-Hub</h1>
+        <div class="container">
+
+            <div class="header-container">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for movies">
+                    <button>Search</button>
+                </div>
+                <div class="categories">
+                    <span class="category">Action</span>
+                    <span class="category">Comedy</span>
+                    <span class="category">Horror</span>
+                    <span class="category">Romance</span>
+                    <span class="category">Sci-fi</span>
+                    <span class="category">Thriller</span>
+                    <span class="category">Drama</span>
+                </div>
+            </div>
+
+        
+            <div class="slide-container">
+                <button id="prev" class="slider-button">Prev</button>
+                <button id="next" class="slider-button">Next</button>
+                
+                <div class="slider" id="movie-slider"> 
+                    
+                    
+                    <div class="movie-slide">
+                        <img src="images/poster 1.jpeg" alt="Joker">
+                        <div class="movie-info" data-movie-id="1">
+                            <h2>The Archer</h2>
+                            <p>Runtime: 140 mins</p>
+                            <p>Showtime: 8 PM</p>
+                            <p class="available-tickets">Available tickets: 10</p>
+                            <button class="purchase-button">Buy Ticket</button>
+                        </div>
+                    </div>
+
+                    <div class="movie-slide">
+                        <img src="images/poster 2.jpeg" alt="The Peakey Blinders">
+                        <div class="movie-info" data-movie-id="2">
+                            <h2>The Dune</h2>
+                            <p>Runtime: 140 mins</p>
+                            <p>Showtime: 11 PM</p>
+                            <p class="available-tickets">Available tickets: 15</p>
+                            <button class="purchase-button">Buy Ticket</button>
+                        </div>
+                    </div>
+
+                    <div class="movie-slide">
+                        <img src="images/poster 3.jpeg" alt="Fight Club">   
+                        <div class="movie-info" data-movie-id="3">
+                            <h2>Oppenheimer</h2>
+                            <p>Runtime: 140 mins</p>
+                            <p>Showtime: 6 PM</p>
+                            <p class="available-tickets">Available tickets: 20</p>
+                            <button class="purchase-button">Buy Ticket</button>
+                        </div>
+                    </div>
+
+                    <div class="movie-slide">
+                        <img src="images/poster 4.jpeg" alt="Lord Of The Rings">
+                        <div class="movie-info" data-movie-id="4">
+                            <h2>Lord Of The Rings</h2>
+                            <p>Runtime: 140 mins</p>
+                            <p>Showtime: 6 PM</p>
+                            <p class="available-tickets">20</p>
+                            <button class="purchase-button">Buy Ticket</button>
+                        </div>
+                    </div>
+
+                    <div class="movie-slide">
+                        <img src="images/poster 5.jpeg" alt="Dark Waters">
+                        <div class="movie-info" data-movie-id="5">
+                            <h2>Dark Waters</h2>
+                            <p>Runtime: 140 mins</p>
+                            <p>Showtime: 6 PM</p>
+                            <p class="available-tickets">20</p>
+                            <button class="purchase-button">Buy Ticket</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+</body>
+</html>
