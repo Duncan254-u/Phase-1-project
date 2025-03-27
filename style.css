@@ -1,17 +1,18 @@
-
-* {
-    margin: 0;
+/* General background styling */
+body {
+    background: linear-gradient(to right, #f5f7fa, #c3cfe2); /* Smooth gradient */
+    color: #333; /* Darker text for readability */
+    font-family: 'Poppins', sans-serif;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    margin: 0;
 }
 
-main {
-    max-width: 1500px;
-    margin: 0 auto;
-    min-height: 100vh;
-    display: flex;
-    background-color: beige;
+/* Centered title */
+h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #222;
+    padding: 20px 0;
 }
 
 .container {
@@ -104,14 +105,16 @@ main {
 
 .movie-item {
     padding: 10px;
-    background-color: gray;
+    background-color: white;
     border-radius: 10px;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: all 0.3s ease, box-shadow 0.3s ease;
 }
 
 .movie-item:hover {
-    background-color: black;
+    
+transform: translateY (-10px) scale (1.05);
+box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -130,6 +133,34 @@ main {
     gap: 20px;
     transition: transform 0.5s ease-in-out;
 }
+/* Styling for Counters */
+.counters {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 18px;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #2c2c2c;
+    border-radius: 8px;
+}
+
+/* Icons & Counter Styling */
+#ticket-counter, #favorite-counter {
+    display: flex;
+    align-items: center;
+    background: blue;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: white;
+}
+
+/* Make the icons stand out */
+#ticket-counter::before, #favorite-counter::before {
+    font-size: 22px;
+    margin-right: 8px;
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -193,8 +224,11 @@ main {
 .purchase-button:hover {
     background-color: blue;
     transform: scale(1.1) translateY(-3px);
+    animation: pulse 1.5 ease infinite;
+}
 
-}.favorite-button {
+
+.favorite-button {
     position: absolute;
     top: 10px;
     right: 15px;
@@ -209,6 +243,7 @@ main {
     transform: scale(1.1);
 }
 .favorite-button.active {
+    transform: scale(10.3s);
     color: red;
 }
 

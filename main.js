@@ -85,6 +85,10 @@ function handleTicketPurchase(button) {
 
 // Function to toggle favorite status and count favorites
 function toggleFavorite(icon) {
+    icon.classList.toggle('active');
+
+    let favoriteCountElement = document.getElementById("favorite-counter");
+    let favoriteCount = parseInt(favoriteCountElement.textContent.split(" ")[1]);
     if (icon.classList.contains('active')) {
         icon.classList.remove('active');
         favoriteCount--;
@@ -92,7 +96,7 @@ function toggleFavorite(icon) {
         icon.classList.add('active');
         favoriteCount++;
     }
-    updateFavoriteCount();
+favoriteCountElement.textContent = favoriteCount();
 }
 
 // Function to update ticket count display
@@ -104,3 +108,4 @@ function updateTicketCount() {
 function updateFavoriteCount() {
     document.getElementById("favorite-counter").textContent = `Favorites: ${favoriteCount}`;
 }
+document.getElementById("ticket-count").textContent = ticketCount;
