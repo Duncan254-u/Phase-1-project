@@ -32,15 +32,17 @@
             <div class="slide-container">
                 <button id="prev" class="slider-button">Prev</button>
                 <button id="next" class="slider-button">Next</button>
-                <div class="counters">
-                    <span id="ticket-counter">
-                        🎟️ Tickets: <span id="ticket-count">0</span>
-                    </span>
-                    <span id="favorite-counter">
-                        ❤️ Favorites: <span id="favorite-count">0</span>
-                    </span>
-                </div>
-            </div>                         
+            </div>
+            
+               <div class="counters">
+    <span id="ticket-counter">
+        🎟️ Tickets: <span id="ticket-count">0</span>
+    </span>
+    <span id="favorite-counter">
+        ❤️ Favorites: <span id="favorite-count">0</span>
+    </span>
+</div>
+         
                
                 <div class="slider" id="movie-slider"> 
                     
@@ -54,6 +56,8 @@
                             <p class="available-tickets">Available tickets: 10</p>
                             <button class="purchase-button">Buy Ticket</button>
                             <span class="favorite-icon" onclick="toggleFavorite(this)">❤️</span>
+                            <div id="favorite-counter">Favorites: 0</div>
+
                         </div>
                     </div>
                

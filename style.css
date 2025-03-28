@@ -1,7 +1,7 @@
 /* General background styling */
 body {
-    background: linear-gradient(to right, #f5f7fa, #c3cfe2); /* Smooth gradient */
-    color: #333; /* Darker text for readability */
+    background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+    color: #333;
     font-family: 'Poppins', sans-serif;
     padding: 0;
     margin: 0;
@@ -24,7 +24,7 @@ h1 {
     align-items: center;
 }
 
-
+/* Header Styling */
 .header-container {
     display: flex;
     flex-direction: column;
@@ -32,6 +32,7 @@ h1 {
     margin-bottom: 20px;
 }
 
+/* Search Bar */
 .search-bar {
     margin-bottom: 40px;
     display: flex;
@@ -71,7 +72,7 @@ h1 {
     transform: scale(1.1);
 }
 
-
+/* Movie Categories */
 .categories {
     display: flex;
     flex-wrap: wrap;
@@ -94,8 +95,7 @@ h1 {
     background-color: red;
 }
 
-
-
+/* Movie List */
 .movie-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -108,16 +108,15 @@ h1 {
     background-color: white;
     border-radius: 10px;
     cursor: pointer;
-    transition: all 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .movie-item:hover {
-    
-transform: translateY (-10px) scale (1.05);
-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
 }
 
-
+/* Movie Slider */
 .slider-container {
     display: flex;
     justify-content: center;
@@ -126,14 +125,17 @@ box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
     width: 80%;
     margin: auto;
     padding-top: 20px;
+    position: relative;
 }
 
 .slider {
     display: flex;
     gap: 20px;
     transition: transform 0.5s ease-in-out;
+    white-space: nowrap;
 }
-/* Styling for Counters */
+
+/* Counters */
 .counters {
     display: flex;
     justify-content: center;
@@ -155,12 +157,7 @@ box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
     color: white;
 }
 
-/* Make the icons stand out */
-#ticket-counter::before, #favorite-counter::before {
-    font-size: 22px;
-    margin-right: 8px;
-}
-
+/* Movie Grid */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -170,6 +167,8 @@ box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
     max-width: 1200px;
     margin: auto;
 }
+
+/* Movie Slide */
 .movie-slide {
     position: relative;
     width: 200px;
@@ -192,7 +191,7 @@ box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
     object-fit: cover;
 }
 
-
+/* Movie Info */
 .movie-info {
     position: absolute;
     bottom: 0;
@@ -209,7 +208,7 @@ box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
     background: rgba(0, 0, 0, 0.8);
 }
 
-
+/* Purchase Button */
 .purchase-button {
     margin-top: 10px;
     padding: 8px 15px;
@@ -224,10 +223,9 @@ box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
 .purchase-button:hover {
     background-color: blue;
     transform: scale(1.1) translateY(-3px);
-    animation: pulse 1.5 ease infinite;
 }
 
-
+/* Favorite Button */
 .favorite-button {
     position: absolute;
     top: 10px;
@@ -236,18 +234,17 @@ box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
     color: white;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
-
 }
 
 .favorite-button:hover {
     transform: scale(1.1);
 }
+
 .favorite-button.active {
-    transform: scale(10.3s);
     color: red;
 }
 
-
+/* Navigation Buttons */
 .navigation-button {
     position: absolute;
     top: 50%;
@@ -261,3 +258,6 @@ box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
     z-index: 2;
 }
 
+.navigation-button:hover {
+    background-color: red;
+}

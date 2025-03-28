@@ -25,6 +25,10 @@ document.addEventListener("DOMContentLoaded", function () {
             handleTicketPurchase(e.target);
         }
     });
+
+    // Add slider functionality
+    document.getElementById("next").addEventListener("click", () => slideMovies("next"));
+    document.getElementById("prev").addEventListener("click", () => slideMovies("prev"));
 });
 
 // Function to fetch movies from OMDb API
@@ -88,24 +92,40 @@ function toggleFavorite(icon) {
     icon.classList.toggle('active');
 
     let favoriteCountElement = document.getElementById("favorite-counter");
-    let favoriteCount = parseInt(favoriteCountElement.textContent.split(" ")[1]);
-    if (icon.classList.contains('active')) {
-        icon.classList.remove('active');
-        favoriteCount--;
-    } else {
-        icon.classList.add('active');
-        favoriteCount++;
+    
+    // Ensure favorite counter exists
+    if (!favoriteCountElement) {
+        console.error("Element with ID 'favorite-counter' not found.");
+        return;
     }
-favoriteCountElement.textContent = favoriteCount();
+
+    // Get current count safely
+    let favoriteCount = parseInt(favoriteCountElement.textContent.replace(/\D/g, "")) || 0;
+
+    // Update count based on class state
+    favoriteCount += icon.classList.contains('active') ? 1 : -1;
+
+    // Ensure count doesn't go negative
+    favoriteCount = Math.max(favoriteCount, 0);
+
+    // Update display
+    favoriteCountElement.textContent = `Favorites: ${favoriteCount}`;
 }
+
 
 // Function to update ticket count display
 function updateTicketCount() {
     document.getElementById("ticket-counter").textContent = `Tickets: ${ticketCount}`;
 }
 
-// Function to update favorite count display
-function updateFavoriteCount() {
-    document.getElementById("favorite-counter").textContent = `Favorites: ${favoriteCount}`;
+// Function to implement slider movement
+function slideMovies(direction) {
+    const slider = document.getElementById("movie-slider");
+    const scrollAmount = 300; // Adjust based on movie card width
+
+    if (direction === "next") {
+        slider.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    } else {
+        slider.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+    }
 }
-document.getElementById("ticket-count").textContent = ticketCount;
