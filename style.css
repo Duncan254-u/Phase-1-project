@@ -243,6 +243,36 @@ h1 {
 .favorite-button.active {
     color: red;
 }
+.purchased-container {
+    margin-top: 10px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.purchased-container h2 {
+    color: #222;
+    margin-bottom: 0px;
+}
+
+.purchased-container ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.purchased-container li {
+    padding: 8px;
+    font-size: 16px;
+    background: #e94560;
+    color: white;
+    border-radius: 5px;
+    margin: 5px 0;
+}
 
 /* Navigation Buttons */
 .navigation-button {
